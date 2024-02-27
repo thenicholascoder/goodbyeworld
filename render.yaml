@@ -1,5 +1,6 @@
 databases:
   - name: mysite
+    ipAllowList: []
     databaseName: mysite
     user: mysite
     plan: free
@@ -21,3 +22,8 @@ services:
         sync: false
       - key: WEB_CONCURRENCY
         value: 2 # sensible default
+  - type: redis
+    name: redis
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: noeviction
